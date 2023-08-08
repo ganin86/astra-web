@@ -1,13 +1,13 @@
-sudo su
-apt install git ca-certificates -y
 #!/bin/bash
+#sudo su
+#apt install git ca-certificates curl-y
 apt-cdrom add
 echo "deb cdrom:[OS Astra Linux 1.6 smolensk-devel - amd64 DVD]/ smolensk contrib main non-free
 deb cdrom:[OS Astra Linux 1.6 smolensk - amd64 DVD ]/ smolensk contrib main non-free
 deb http://nginx.org/packages/debian/ wheezy nginx " > /etc/apt/sources.list
 apt update -y
 apt upgrade -y
-apt-get install build-essential curl wget apt-transport-https -y
+apt-get install build-essential apt-transport-https -y
 apt install php php-fpm  -y
 systemctl stop apache2
 systemctl disable apache2

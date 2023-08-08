@@ -1,5 +1,5 @@
-# astra-web
-Установка в  Astra linux Смоленск php - nginx node npm
+# astra linux web dev
+Установка в  Astra linux Смоленск  nginx php node npm
 Проверено на 16 версии astra в virtualbox
 
 После установки системы вставляете 2 установочный диск

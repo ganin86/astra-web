@@ -1,6 +1,6 @@
 #!/bin/bash
 #sudo su
-#apt install git ca-certificates curl-y
+#apt install git ca-certificates curl dirmngr -y
 apt-cdrom add
 echo "deb cdrom:[OS Astra Linux 1.6 smolensk-devel - amd64 DVD]/ smolensk contrib main non-free
 deb cdrom:[OS Astra Linux 1.6 smolensk - amd64 DVD ]/ smolensk contrib main non-free
@@ -8,7 +8,7 @@ deb http://nginx.org/packages/debian/ wheezy nginx " > /etc/apt/sources.list
 apt update -y
 apt upgrade -y
 
-apt install dirmngr build-essential apt-transport-https php php-fpm unzip -y
+apt install build-essential apt-transport-https php php-fpm unzip -y
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62
 systemctl stop apache2
 systemctl disable apache2

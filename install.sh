@@ -37,6 +37,7 @@ echo " <?php phpinfo() ?>" > /var/www/html/index.php
 systemctl enable nginx
 systemctl restart nginx
 dpkg -i code.deb
+mkdir /usr/share/keyrings
 bash node.sh
 apt install npm nodejs -y
 npm install vue

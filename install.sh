@@ -33,7 +33,7 @@ echo "server {
 }
 " > /etc/nginx/sites-enabled/default
 
-echo " <?php phpinfo() ?>" > /var/www/html/index.php
+echo " <?php phpinfo(); ?>" > /var/www/html/index.php
 systemctl enable nginx
 systemctl restart nginx
 dpkg -i code.deb

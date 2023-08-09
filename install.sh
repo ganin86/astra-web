@@ -7,8 +7,9 @@ deb cdrom:[OS Astra Linux 1.6 smolensk - amd64 DVD ]/ smolensk contrib main non-
 deb http://nginx.org/packages/debian/ wheezy nginx " > /etc/apt/sources.list
 apt update -y
 apt upgrade -y
-apt-get install build-essential apt-transport-https -y
-apt install php php-fpm  -y
+
+apt install dirmngr build-essential apt-transport-https php php-fpm unzip -y
+apt-key adv --keyserver keyserver.ubuntu.com --recv-keys ABF5BD827BD9BF62
 systemctl stop apache2
 systemctl disable apache2
 unzip nginx.zip
@@ -33,6 +34,7 @@ echo "server {
 " > /etc/nginx/sites-enabled/default
 
 echo " <?php phpinfo() ?>" > /var/www/html/index.php
+systemctl enable nginx
 systemctl restart nginx
 dpkg -i code.deb
 bash node.sh
